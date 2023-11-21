@@ -1,5 +1,5 @@
 import streamlit as st
-import joblib
+import pickle
 import pandas as pd
 import json
 
@@ -47,7 +47,9 @@ def app():
     sorted_regional_specs = sorted(regional_specs_mapping.keys())
 
     # Load the saved model
-    model = joblib.load('xgb_model2.pkl')
+    #model = joblib.load('xgb_model2.pkl')
+    with open('xgb_model3.pkl', 'rb') as file:
+        model = pickle.load(file)
     residuals_std_per_category = {
         'luxury': 145.43160204589725 * 1000,
         'standard': 48.47367882168356 * 1000,
