@@ -5,7 +5,6 @@ import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
-from statsmodels.nonparametric.smoothers_lowess import lowess
 
 def app():
     # Read the data
